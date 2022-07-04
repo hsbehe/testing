@@ -651,33 +651,6 @@ router.get("/download/yt/playmp4", async(req, res, next) => {
       }
 });
       
-router.get('/download/yt/search', async(req, res, next) => {
-    var url = req.query.query;
-    var apikey = req.query.apikey;
-    
-    if(!query) return res.json(loghandler.notquery)
-    if(!apikey) return res.json(loghandler.notparam)
-    if(listkey.includes(apikey)){
-    ytSearch(query)
-        .then((result) => {
-            res.json({
-              status: true,
-              code: 200,
-              creator: `Specstor`,
-              result
-            })
-        })
-        .catch((error) => {
-            res.json(error);
-        });
-      } else {
-     res.sendFile(__path + '/docs/503.html')
-     }
-})
-} else {
-  res.sendFile(__path + '/docs/403.html')
-}
-);
 
 router.get('/download/yt/mp4', async (req, res, next) => {
           var apikey = req.query.apikey
