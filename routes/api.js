@@ -677,7 +677,7 @@ router.get('/download/yt/search', async(req, res, next) => {
 } else {
   res.sendFile(__path + '/docs/403.html')
 }
-});
+);
 
 router.get('/download/yt/mp4', async (req, res, next) => {
           var apikey = req.query.apikey
