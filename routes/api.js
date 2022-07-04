@@ -3164,5 +3164,5 @@ router.get('/other/kbbi', async (req, res, next) => {
   res.sendFile(__path + '/docs/403.html')
 }
 })
-
+})
 module.exports = router
